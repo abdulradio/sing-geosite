@@ -30,34 +30,13 @@ jobs:
           mkdir dist
           cp geosite.db dist/
           sha256sum geosite.db > dist/geosite.db.sha256sum
-      - name: Push artifacts to release branch
-        if: steps.build.outputs.skip != 'true'
-        run: |
-          git config --local user.email "891708+soffchen@users.noreply.github.com"
-          git config --local user.name "github-action[bot]"
-          git fetch
-          git checkout release
-          git checkout --orphan release-orphan
-          git rm -rf .
           
-          cp dist/* .
-          git add geosite.db
-          git add geosite.db.sha256sum
-          
-          git commit -am "Updated at $(date)"
-          git branch -D release
-          git branch -m release
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: release
           force: true
-
-      - name: Purge CDN Cache
-        run: |
-          curl -L https://purge.jsdelivr.net/gh/soffchen/sing-geosite@release/geosite.db > /dev/null 2>&1
-          curl -L https://purge.jsdelivr.net/gh/soffchen/sing-geosite@release/geosite.db.sha256sum > /dev/null 2>&1
           
       - name: Create a release
         if: steps.build.outputs.skip != 'true'
