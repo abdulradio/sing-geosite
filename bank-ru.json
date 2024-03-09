@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain": "rncb.ru",
+      "domain_suffix": ".rncb.ru"
+    }
+  ]
+}

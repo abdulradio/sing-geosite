@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain": [
+        "dns-shop.ru",
+        "dexp.club",
+        "xn--80aat1aeddn.xn--p1ai",
+        "ardor-gaming.com",
+        "xn--80aat1aeddn.xn--p1acf",
+        "xn----7sbbtpmtuuiis.xn--p1acf",
+        "dnsgroup.ru",
+        "prozapass.ru",
+        "xn--80aaomkqsrihq.xn--p1ai",
+        "finepower.ru",
+        "dns-tech.ru",
+        "frau-technica.ru",
+        "prozapass.com",
+        "dns-shop.club",
+        "prozapass.info",
+        "frautechnica.ru",
+        "xn--80aaomkqsrihq.xn--p1acf",
+        "dns-club.ru",
+        "komtek.net.ru",
+        "optima-computers.ru",
+        "technolider.com",
+        "micro-line.ru",
+        "taggsm.ru"
+      ],
+      "domain_suffix": [
+        ".dns-shop.ru",
+        ".dexp.club",
+        ".xn--80aat1aeddn.xn--p1ai",
+        ".ardor-gaming.com",
+        ".xn--80aat1aeddn.xn--p1acf",
+        ".xn----7sbbtpmtuuiis.xn--p1acf",
+        ".dnsgroup.ru",
+        ".prozapass.ru",
+        ".xn--80aaomkqsrihq.xn--p1ai",
+        ".finepower.ru",
+        ".dns-tech.ru",
+        ".frau-technica.ru",
+        ".prozapass.com",
+        ".dns-shop.club",
+        ".prozapass.info",
+        ".frautechnica.ru",
+        ".xn--80aaomkqsrihq.xn--p1acf",
+        ".dns-club.ru",
+        ".komtek.net.ru",
+        ".optima-computers.ru",
+        ".technolider.com",
+        ".micro-line.ru",
+        ".taggsm.ru"
+      ]
+    }
+  ]
+}

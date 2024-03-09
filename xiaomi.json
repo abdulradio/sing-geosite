@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain": [
+        "mi.com",
+        "mi-img.com",
+        "miui.com",
+        "sina.com.cn"
+      ],
+      "domain_suffix": [
+        ".mi.com",
+        ".mi-img.com",
+        ".miui.com",
+        ".sina.com.cn"
+      ]
+    }
+  ]
+}
