@@ -2,7 +2,7 @@ name: Release
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 0 * * 0"
+    - cron: "30 00 * * 0"
 jobs:
   build:
     name: Build
@@ -15,21 +15,21 @@ jobs:
       - name: Get latest go version
         id: version
         run: |
-          echo ::set-output name=go_version::$(curl -s https://raw.githubusercontent.com/actions/go-versions/main/versions-manifest.json | grep -oE '"version": "[0-9]{1}.[0-9]{1,}(.[0-9]{1,})?"' | head -1 | cut -d':' -f2 | sed 's/ //g; s/"//g')
+          echo ::set-output name=go_version::1.19.9
       - name: Setup Go
         uses: actions/setup-go@v2
         with:
           go-version: ${{ steps.version.outputs.go_version }}
       - name: Build geosite
         id: build
-        run: go run -v .
+        run: |
+          go run -v .
       - name: Generate sha256 hash
         if: steps.build.outputs.skip != 'true'
         run: |
           mkdir dist
+          cp geosite.db dist/
           sha256sum geosite.db > dist/geosite.db.sha256sum
-          cp geosite.db* dist/
-          
       - name: Push artifacts to release branch
         if: steps.build.outputs.skip != 'true'
         run: |
@@ -47,14 +47,13 @@ jobs:
           git commit -am "Updated at $(date)"
           git branch -D release
           git branch -m release
-
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: release
           force: true
-
+          
       - name: Create a release
         if: steps.build.outputs.skip != 'true'
         id: create_release
