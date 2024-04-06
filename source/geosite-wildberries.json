@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain": [
+        "wildberries.ru",
+        "wildberries.co.il",
+        "refashion.ru",
+        "wildberries.eu",
+        "vsemrabota.ru",
+        "wb.ru"
+      ],
+      "domain_suffix": [
+        ".wildberries.ru",
+        ".wildberries.co.il",
+        ".refashion.ru",
+        ".wildberries.eu",
+        ".vsemrabota.ru",
+        ".wb.ru"
+      ]
+    }
+  ]
+}

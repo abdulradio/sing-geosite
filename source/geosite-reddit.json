@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain": [
+        "reddit.com",
+        "redditstatic.com",
+        "redditmail.com",
+        "redditmedia.com",
+        "redd.it",
+        "reddit.map.fastly.net"
+      ],
+      "domain_suffix": [
+        ".reddit.com",
+        ".redditstatic.com",
+        ".redditmail.com",
+        ".redditmedia.com",
+        ".redd.it",
+        ".reddit.map.fastly.net"
+      ]
+    }
+  ]
+}

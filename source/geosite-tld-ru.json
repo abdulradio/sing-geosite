@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain": ".tatar",
+      "domain_suffix": [
+        ".ru",
+        ".rf",
+        ".su",
+        ".xn--p1ai",
+        ".moscow",
+        "..tatar"
+      ]
+    }
+  ]
+}
