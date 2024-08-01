@@ -3,6 +3,7 @@
   "rules": [
     {
       "domain": [
+        "ggpht.com",
         "googlevideo.com",
         "wide-youtube.l.google.com",
         "withyoutube.com",
@@ -34,6 +35,7 @@
       ],
       "domain_suffix": [
         ".youtube",
+        ".ggpht.com",
         ".googlevideo.com",
         ".wide-youtube.l.google.com",
         ".withyoutube.com",
