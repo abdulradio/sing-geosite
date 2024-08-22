@@ -32,7 +32,9 @@
         "zetimage.net",
         "filmix.biz",
         "filmix.me",
-        "filmix.date"
+        "filmix.date",
+        "firebase-settings.crashlytics.com",
+        "app-measurement.com"
       ],
       "domain_suffix": [
         ".filmixapp.cyou",
@@ -64,7 +66,9 @@
         ".zetimage.net",
         ".filmix.biz",
         ".filmix.me",
-        ".filmix.date"
+        ".filmix.date",
+        ".firebase-settings.crashlytics.com",
+        ".app-measurement.com"
       ]
     }
   ]
