@@ -176,6 +176,7 @@
         "mi-img.com",
         "miui.com",
         "sina.com.cn",
+        "ott.io.mi.com",
         "roblox.com"
       ],
       "domain_suffix": [
@@ -360,6 +361,7 @@
         ".mi-img.com",
         ".miui.com",
         ".sina.com.cn",
+        ".ott.io.mi.com",
         ".roblox.com"
       ]
     }

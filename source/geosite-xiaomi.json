@@ -6,13 +6,15 @@
         "mi.com",
         "mi-img.com",
         "miui.com",
-        "sina.com.cn"
+        "sina.com.cn",
+        "ott.io.mi.com"
       ],
       "domain_suffix": [
         ".mi.com",
         ".mi-img.com",
         ".miui.com",
-        ".sina.com.cn"
+        ".sina.com.cn",
+        ".ott.io.mi.com"
       ]
     }
   ]
