@@ -3,12 +3,12 @@
   "rules": [
     {
       "domain": [
-        "android.com",
-        "androidify.com"
+        "v8.dev",
+        "v8project.org"
       ],
       "domain_suffix": [
-        ".android.com",
-        ".androidify.com"
+        ".v8.dev",
+        ".v8project.org"
       ]
     }
   ]
