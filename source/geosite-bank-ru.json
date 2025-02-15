@@ -1,9 +1,17 @@
 {
-  "version": 1,
+  "version": 2,
   "rules": [
     {
-      "domain": "rncb.ru",
-      "domain_suffix": ".rncb.ru"
+      "domain": [
+        "rncb.ru",
+        "vtb.ru",
+        "online.vtb.ru"
+      ],
+      "domain_suffix": [
+        ".rncb.ru",
+        ".vtb.ru",
+        ".online.vtb.ru"
+      ]
     }
   ]
 }

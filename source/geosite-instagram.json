@@ -1,8 +1,10 @@
 {
-  "version": 1,
+  "version": 2,
   "rules": [
     {
       "domain": [
+        "graph.instagram.com",
+        "graph-fallback.instagram.com",
         "achat-followers-instagram.com",
         "acheter-followers-instagram.com",
         "acheterdesfollowersinstagram.com",
@@ -77,6 +79,8 @@
         "wwwinstagram.com"
       ],
       "domain_suffix": [
+        ".graph.instagram.com",
+        ".graph-fallback.instagram.com",
         ".achat-followers-instagram.com",
         ".acheter-followers-instagram.com",
         ".acheterdesfollowersinstagram.com",

@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "rules": [
     {
       "domain": [
@@ -77,6 +77,7 @@
         "scholar.google.se",
         "scholar.google.si",
         "scholar.google.sk",
+        "scholar.googleusercontent.com",
         "scholar.l.google.com"
       ]
     }

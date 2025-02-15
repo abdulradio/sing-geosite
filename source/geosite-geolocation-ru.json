@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "rules": [
     {
       "domain": [
@@ -277,6 +277,8 @@
         "micro-line.ru",
         "taggsm.ru",
         "rncb.ru",
+        "vtb.ru",
+        "online.vtb.ru",
         "globus.link",
         "crimea-board.net",
         "drive2.ru",
@@ -558,6 +560,8 @@
         ".micro-line.ru",
         ".taggsm.ru",
         ".rncb.ru",
+        ".vtb.ru",
+        ".online.vtb.ru",
         ".globus.link",
         ".crimea-board.net",
         ".drive2.ru",
