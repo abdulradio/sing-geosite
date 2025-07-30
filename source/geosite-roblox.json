@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain": [
+        "roblox.com",
+        "rbxcdn.com"
+      ],
+      "domain_suffix": [
+        ".roblox.com",
+        ".rbxcdn.com"
+      ]
+    }
+  ]
+}
