@@ -71,7 +71,7 @@ jobs:
 
       - name: Release geosite.db
         if: steps.build.outputs.skip != 'true'
-        uses: actions/upload-release-asset@v2
+        uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -81,7 +81,7 @@ jobs:
           asset_content_type: application/octet-stream
       - name: Release geosite.db sha256sum
         if: steps.build.outputs.skip != 'true'
-        uses: actions/upload-release-asset@v2
+        uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
