@@ -1,8 +1,10 @@
 name: Release
+
 on:
   workflow_dispatch:
   schedule:
     - cron: "30 00 * * 2"
+
 jobs:
   build:
     name: Build
@@ -12,26 +14,27 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+
       - name: Get latest go version
         id: version
-        run: |
-          echo "go_version=1.19.9" >> $GITHUB_OUTPUT
+        run: echo "go_version=1.19.9" >> $GITHUB_OUTPUT
+
       - name: Setup Go
         uses: actions/setup-go@v2
         with:
           go-version: ${{ steps.version.outputs.go_version }}
+
       - name: Build geosite
         id: build
-        run: |
-          go run -v .
+        run: go run -v .
+
       - name: Generate sha256 hash
-        if: steps.build.outputs.skip != 'true'
         run: |
-          mkdir dist
+          mkdir -p dist
           cp geosite.db dist/
           sha256sum geosite.db > dist/geosite.db.sha256sum
+
       - name: Push artifacts to release branch
-        if: steps.build.outputs.skip != 'true'
         run: |
           git config --local user.email "abdul.nalim@yandex.ru"
           git config --local user.name "github-action[bot]"
@@ -39,53 +42,32 @@ jobs:
           git checkout release
           git checkout --orphan release-orphan
           git rm -rf .
-          
+
           cp dist/* .
-          git add geosite.db
-          git add geosite.db.sha256sum
-          
+          git add geosite.db geosite.db.sha256sum
+
           git commit -am "Updated at $(date)"
           git branch -D release
           git branch -m release
+
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: release
           force: true
-      
+
       - name: Generate tag name
         id: tag
-        run: |
-          echo "tag=$(date -u +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
-          
-      - name: Create a release
-        if: steps.build.outputs.skip != 'true'
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: echo "tag=$(date -u +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release and Upload Artifacts
+        uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.tag.outputs.tag }}
           release_name: ${{ steps.tag.outputs.tag }}
-
-      - name: Release geosite.db
-        if: steps.build.outputs.skip != 'true'
-        uses: actions/upload-release-asset@v1
+          files: |
+            dist/geosite.db
+            dist/geosite.db.sha256sum
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./geosite.db
-          asset_name: geosite.db
-          asset_content_type: application/octet-stream
-      - name: Release geosite.db sha256sum
-        if: steps.build.outputs.skip != 'true'
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./geosite.db.sha256sum
-          asset_name: geosite.db.sha256sum
-          asset_content_type: text/plain
