@@ -176,9 +176,7 @@
         "mi-img.com",
         "miui.com",
         "sina.com.cn",
-        "ott.io.mi.com",
-        "roblox.com",
-        "rbxcdn.com"
+        "ott.io.mi.com"
       ],
       "domain_suffix": [
         ".xn--p1ai",
@@ -362,9 +360,7 @@
         ".mi-img.com",
         ".miui.com",
         ".sina.com.cn",
-        ".ott.io.mi.com",
-        ".roblox.com",
-        ".rbxcdn.com"
+        ".ott.io.mi.com"
       ]
     }
   ]
