@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain": [
+        "taxsee.com",
+        "taxsee.pro",
+        "taxsee.ru"
+      ],
+      "domain_suffix": [
+        ".taxsee.com",
+        ".taxsee.pro",
+        ".taxsee.ru"
+      ]
+    }
+  ]
+}
