@@ -22,7 +22,8 @@
         "novayagazeta.ru",
         "4pda.ru",
         "habr.com",
-        "torrent.by"
+        "torrent.by",
+        "verstka.media"
       ],
       "domain_suffix": [
         ".grani.ru",
@@ -44,7 +45,8 @@
         ".novayagazeta.ru",
         ".4pda.ru",
         ".habr.com",
-        ".torrent.by"
+        ".torrent.by",
+        ".verstka.media"
       ]
     }
   ]
