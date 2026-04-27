@@ -35,7 +35,8 @@
         "whatsmyip.com",
         "ipinfo.io",
         "protonvpn.com",
-        "ipaddress.my"
+        "ipaddress.my",
+        "sypexgeo.net"
       ],
       "domain_suffix": [
         ".ifconfig.me",
@@ -70,7 +71,8 @@
         ".whatsmyip.com",
         ".ipinfo.io",
         ".protonvpn.com",
-        ".ipaddress.my"
+        ".ipaddress.my",
+        ".sypexgeo.net"
       ]
     }
   ]
