@@ -3,14 +3,14 @@
   "rules": [
     {
       "domain": [
-        "rncb.ru",
         "vtb.ru",
-        "online.vtb.ru"
+        "online.vtb.ru",
+        "altyn.one"
       ],
       "domain_suffix": [
-        ".rncb.ru",
         ".vtb.ru",
-        ".online.vtb.ru"
+        ".online.vtb.ru",
+        ".altyn.one"
       ]
     }
   ]
